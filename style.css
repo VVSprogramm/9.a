@@ -1,20 +1,33 @@
-.wrapper
+.menu
 {
-    background: rgb(129, 212, 106);
+    height: 100%;
+    width: 200px;
+    background-color: black;
+    top: 0;
+    left: 0;
+    position: fixed;
+
 }
 
-h3
+.menu a
 {
-    color: rgb(28, 128, 98);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: large;
-    border: 1mm solid powderblue;
-    padding: 5mm;
-    margin: 5mm;
+    color: white;
+    padding: 16px;
+
 }
 
-li
+.menu a:hover
 {
-    margin: 6mm;
+    background-color: white;
+    color: black;
 }
+
+.content
+{
+    margin-left: 200px;
+    padding-left: 20px;
+}
+
+/*Ievades stilizēšana*/
+
 
