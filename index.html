@@ -1,45 +1,46 @@
 <!DOCTYPE html>
 <html lang="eng">
     <head>
-        <meta charset="utf-8">
-        <title>Navigācija</title>
-        <link href="style.css" rel="stylesheet"/>
+        <title>Atmiņas spēle</title>
+        <link href="style2.css" rel="stylesheet"/>
+
     </head>
     <body>
-        <div class = "wrapper">
-            <div class = "header">
-                <img src = "attels.jpg" alt = "kosmoss" width="50" height="50">
-                <ul>viens elements</ul>
-                <li>
-                    <a href = "nakosais.html">
-                        Pāriet uz
-                    </a>
-                </li>
+        <div class="wrapper">
+            <div class="menu">
+                <a href="spele.html">
+                    Spēle
+                </a>
+                <a href="noteikumi.html"> <!-- Hiperlinks, lai pārietu uz noteikumu failu-->
+                    Noteikumi
+                </a>
             </div>
-            <div class = "content">
+            <div class="content">
                 <h3>Reģistrācija</h3>
-                Vārds: <input/>
-                <br/>
-                Vecums: <input/>
-                <br/>
-                Reģions:
-                <select>
-                    <option value="Kurzeme">
-                        Kurzeme
-                    </option>
-                    <option value="Latgale">
-                        Latgale
-                    </option>
-                    <option value="Vidzeme">
-                        Vidzeme
-                    </option>
-                    <option value="Zemgale">
-                        Zemgale
-                    </option>
-                </select>
-                <br/>
-                <button>Reģistrēties</button>
+                <label for="vards"><b>Vārds</b></label>
+                <input type="text" placeholder="Ievadi vārdu" id="vards" required/>
+
+                <label for="vecums"><b>Vecums</b></label>
+                <input type="text" placeholder="Ievadi vecumu" id="vecums" required/>
+
+                <button type="submit" class="registraction" onclick="saktspeli()" >Reģistrēties</button>
             </div>
         </div>
+        <script>
+            function saktspeli(){
+                let vards = document.querySelector("#vards").value
+                let vecums = document.querySelector("#vecums").value
+                console.log(vards)
+                if(vards =="") //Apgalvojums
+                {
+                    alert("Ievadi datus!")
+                }
+                else
+                {
+                    window.location='spele.html#'+vards+','+vecums
+                }
+                
+            }
+        </script>
     </body>
 </html>

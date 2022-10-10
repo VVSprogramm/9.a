@@ -1,20 +1,96 @@
-.wrapper
+.menu
 {
-    background: rgb(129, 212, 106);
+    height: 100%;
+    width: 200px;
+    background-color: black;
+    top: 0;
+    left: 0;
+    position: fixed;
+
 }
 
-h3
+.menu a /*Attiecas uz hiperlinkiem*/
+
 {
-    color: rgb(28, 128, 98);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: large;
-    border: 1mm solid powderblue;
-    padding: 5mm;
-    margin: 5mm;
+    color: white;
+    padding: 16px;
+    display: block; /*Attēlojums pa visu navigācijas joslas definēto platumu*/
+    text-decoration: none; /*Noņem hiperlinkiem raksturīgo apakšsvītru*/
 }
 
-li
+.menu a:hover
 {
-    margin: 6mm;
+    background-color: white;
+    color: black;
 }
 
+.content
+{
+    margin-left: 200px;
+    padding-left: 20px;
+}
+/*Ievades stilizēšana*/ 
+
+input[type=text] {
+    width: 100%; /*Platums*/
+    padding: 15px; /*Atstarpe starp elementu un rāmi*/
+    margin: 5px 0 22px 0; /*Atstarpe starp elementa rāmi un pārējo daļu*/
+    display: inline-block; /*Attēlojums*/
+    border: none; /*Rāmis*/
+    background: #f1f1f1; /*Fona krāsa*/
+}
+
+    input[type=text]:focus { /*Kas notiek, kad lietotājs gatavojas ievadīt tekstu*/
+        background-color: #ddd;
+        outline: none; /*Ārējās līnījas iekrāsošanās*/
+}
+
+/*Reģistrēšanās pogas stilizēšana*/
+
+.registraction {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer; /*Kursora veida maiņa*/
+    width: 100%;
+    opacity: 0.9; /*Caurredzība*/
+
+}
+
+.registraction:hover {
+    opacity:1
+}
+
+/*Spēles elementu stilizēšana*/
+/*Spēles laukuma atrašanās vieta un stils*/
+.game
+{
+    width: 350px;
+    background: black;
+    text-align: center; /*Elementu novietojums*/
+    margin-left: auto; /*Bloka novietošana centrā*/
+    margin-right: auto;
+}
+
+/*Bloku, kur atrodas emocijzīmes, stilizēšana*/
+.block
+{
+    display: inline-block;
+    background: rgb(221, 221, 221);
+    width: 100px;
+    height: 100px;
+    border: 1px solid white;
+    text-align: center;
+    margin: 5px;
+    font-size: 45px;
+    line-height: 100px; /*Centrēts vertikāli*/
+
+
+}
+
+.block div
+{
+    visibility: hidden;
+}
