@@ -26,6 +26,8 @@ function veiktGajienu(laukums){
     if(atvertsJaunsLaukums)
     {
         document.querySelector('#'+laukums+' div').style.visibility = "visible";
+        document.querySelector('#' + laukums + ' div').style.opacity = 1
+        
         pedejieDivi.push(laukums)
     }
 
@@ -43,6 +45,21 @@ function veiktGajienu(laukums){
             console.log('Atvērti vienādi laukumi')
             atvertieLaukumi.push(pedejieDivi[0],pedejieDivi[1])
         }
+        else{
+            console.log("Nav atvērti vienādi laukumi")
+            document.querySelector("#"+pedejieDivi[0]+" div").style.opacity = 0.1
+            document.querySelector("#"+pedejieDivi[1]+" div").style.opacity = 0.1
+        }
+
+        pedejieDivi=[]
+    }
+
+    if(laukumaSaturs.length==atvertieLaukumi.length){
+        setTimeout(()=>
+        {
+            alert('Apsveicam!')
+        },1000)
+            
     }
 }
 
