@@ -7,8 +7,10 @@ document.querySelector(".title").innerHTML = 'Sveiks, ' + vards +'!'
 
 //Array
 let laukumaSaturs = ['🤩','🥳','😎','🤩','🥳','😎']
-let atvertieLaukumi = []
+let atvertieLaukumi = [] //['L0','L3','L1','L4']
 let pedejieDivi = []
+//Int/Integer/Vesels skaitlis
+let punkti = 0
 
 function veiktGajienu(laukums){
     
@@ -44,6 +46,10 @@ function veiktGajienu(laukums){
         if(laukumaSaturs[atverts1]==laukumaSaturs[atverts2]){
             console.log('Atvērti vienādi laukumi')
             atvertieLaukumi.push(pedejieDivi[0],pedejieDivi[1])
+            //punkti = punkti+1
+            punkti += 1
+            console.log(punkti + " punkts/i")
+            document.querySelector("#points").innerHTML = 'Punkti:'+ punkti
         }
         else{
             console.log("Nav atvērti vienādi laukumi")

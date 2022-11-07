@@ -94,3 +94,17 @@ input[type=text] {
 {
     visibility: hidden;
 }
+
+.save
+{
+    background-color: #000000;
+    color: rgb(166, 166, 166);
+    padding: 16px 20px;
+    margin: 50px 0 50px;
+    border: none;
+    opacity: 0.9; /*Caurredzība*/
+}
+
+.save:hover{
+    opacity: 1;
+}
