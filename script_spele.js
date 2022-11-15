@@ -3,6 +3,9 @@ adrese = decodeURI(adrese)
 adrese = adrese.replace("#"," ")
 adrese = adrese.split(",")
 let vards = adrese[0]
+let vecums = adrese[1]
+console.log(vards)
+console.log(vecums)
 document.querySelector(".title").innerHTML = 'Sveiks, ' + vards +'!'
 
 //Array
@@ -69,4 +72,29 @@ function veiktGajienu(laukums){
     }
 }
 
+//Jauna funkcija - saglabat()
+
+function saglabat(){
+    //Izvadam datus konsolē - Funkcija darbojas\
+    console.log("Funkcija darbojas")
+
+    const dati = [vards,vecums,punkti] //Masīvs
+
+    let csvSaturs = "data:text/csv;charset=utf-8"
+
+    dati.forEach(function(rowArray){
+        let row = rowArray.join(',');
+        csvSaturs += row
+    })
+    // csvSaturs += dati
+    console.log(csvSaturs)
+    let encodeUri = encodeURI(csvSaturs)
+    console.log(encodeUri)
+    let savienojums = document.createElement("a")
+    savienojums.setAttribute("href",encodeUri)
+    savienojums.setAttribute("download","speles_dati.csv")
+    document.body.appendChild(savienojums)
+
+    savienojums.click()
+}
 
