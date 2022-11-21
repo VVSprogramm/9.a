@@ -80,20 +80,13 @@ function saglabat(){
 
     const dati = [vards,vecums,punkti] //Masīvs
 
-    let csvSaturs = "data:text/csv;charset=utf-8"
 
-    dati.forEach(function(rowArray){
-        let row = rowArray.join(',');
-        csvSaturs += row
-    })
-    // csvSaturs += dati
-    console.log(csvSaturs)
-    let encodeUri = encodeURI(csvSaturs)
-    console.log(encodeUri)
     let savienojums = document.createElement("a")
-    savienojums.setAttribute("href",encodeUri)
+    let csvSaturs = dati
+    let blob = new Blob([csvSaturs],{type: "data:text/csv;charset=utf-8"})
+    let url = URL.createObjectURL(blob)
+    savienojums.href = url
     savienojums.setAttribute("download","speles_dati.csv")
-    document.body.appendChild(savienojums)
 
     savienojums.click()
 }
